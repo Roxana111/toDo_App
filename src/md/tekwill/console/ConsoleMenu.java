@@ -62,7 +62,7 @@ public class ConsoleMenu {
             System.out.println("No tasks yet ! \n");
         } else {
             for (Task task : tasks) {
-                System.out.println("\t[" + task.getId() + "]" + task.getTitle());
+                System.out.println("\t[" + task.getId() + "] " + task.getTitle());
                 System.out.println("\tDescription: " + task.getDescription());
                 System.out.println("\tTarget date: " + task.getTargetDate());
                 System.out.println("\tDone: " + task.isDone() + " \n");
@@ -97,7 +97,7 @@ public class ConsoleMenu {
         showAllTasks();
         System.out.println("Input the ID of task to edit: ");
         int newId = scanner.nextInt();
-        System.out.println("Is the task done? (accepted values are: true | false");
+        System.out.println("Is the task done? (accepted values are: true | false)");
         boolean newValue = scanner.nextBoolean();
         taskManager.update(newId, newValue);
     }
